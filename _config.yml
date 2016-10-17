@@ -22,6 +22,12 @@ url: "http://gilesdring.com/cv" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
+name: Giles Dring
+phone: +44 (0)7971 548826
+linkedin: gilesdring
+address: Hebden Bridge, West Yorkshire HX7 6AS
+
+
 # Build settings
 markdown: kramdown
 theme: minima
