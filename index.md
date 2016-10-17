@@ -1,5 +1,8 @@
 ---
 layout: default
+profile: base
 ---
 
-Work in progress
+# Profile
+
+{{ site.profile | where: "slug",page.profile }}
