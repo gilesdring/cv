@@ -28,3 +28,11 @@ theme: minima
 
 collections:
 - profile
+- expertise
+
+defaults:
+  - scope:
+      path: ""
+      type: expertise
+    values:
+      display: true
