@@ -17,8 +17,8 @@ title: Giles Dring CV
 email: giles@dringtech.com
 description: > # this means to ignore newlines until "baseurl:"
   Giles Dring CV
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://gilesdring.com/cv" # the base hostname & protocol for your site
+baseurl: "/cv" # the subpath of your site, e.g. /blog
+url: "http://gilesdring.com/" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
