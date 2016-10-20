@@ -36,3 +36,11 @@ profile: base
 
   {% endfor %}
 {% endfor %}
+
+# Additional information
+{% assign additional = site.additional | sort: "order" %}
+{% for a in additional %}
+## {{ a.title }}
+
+{{ a }}
+{% endfor %}
