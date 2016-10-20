@@ -39,6 +39,5 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: expertise
     values:
       display: true
