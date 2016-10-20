@@ -22,8 +22,17 @@ profile: base
 {% endfor %}
 
 # History
-{% assign jobs = site.employment | sort:"from" | reverse %}
+{% assign jobs = site.employment | where: "display","true" | sort:"from" | reverse %}
 
 {% for job in jobs %}
 ## {{ job.role }}, {{ job.company }}, {% include dates.html item=job %}
+  {% assign engagements = site.engagements | where:"job",job.slug | reverse %}
+  {% for engagement in engagements %}
+### {{ engagement.role }}, {{ engagement.client}}
+  <div class='engagement_time'>{% include dates.html item=engagement %}
+  {% if engagement.duration %}({{ engagement.duration }}){% endif %}
+  </div>
+{{ engagement }}
+
+  {% endfor %}
 {% endfor %}

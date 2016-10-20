@@ -37,6 +37,7 @@ collections:
 - expertise
 - achievements
 - employment
+- engagements
 
 defaults:
   - scope:

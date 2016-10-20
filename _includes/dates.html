@@ -1,7 +1,14 @@
-{% assign start = include.item.from | date:"%b %Y" %}{%
-if include.item.to == null %}{%
-  assign end = 'date' %}{%
-else %}{%
-  assign end = include.item.to | date:"%b %Y" %}{%
-endif %}{{
-  start }} to {{ end }}
+{% capture dates %}
+{% if include.item.from %}
+  {% assign start = include.item.from | date:"%b %Y" %}
+  {% if include.item.to == null %}
+    {% assign end = 'date' %}
+  {% else %}
+    {% assign end = include.item.to | date:"%b %Y" %}
+  {% endif -%}
+    {{ start }} to {{ end }}
+  {% else %}
+  {% for dt in include.item.dates %}
+  {% include dates.html item=dt %}{% unless forloop.last -%}, {% endunless %}{% endfor %}
+{% endif %}
+{% endcapture %}{{ dates | strip | strip_newlines }}
