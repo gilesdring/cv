@@ -20,3 +20,10 @@ profile: base
 {% for a in achievements %}
 * {{ a }}
 {% endfor %}
+
+# History
+{% assign jobs = site.employment | sort:"from" | reverse %}
+
+{% for job in jobs %}
+## {{ job.role }}, {{ job.company }}, {% include dates.html item=job %}
+{% endfor %}

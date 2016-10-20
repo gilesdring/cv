@@ -1,0 +1,7 @@
+{% assign start = include.item.from | date:"%b %Y" %}{%
+if include.item.to == null %}{%
+  assign end = 'date' %}{%
+else %}{%
+  assign end = include.item.to | date:"%b %Y" %}{%
+endif %}{{
+  start }} to {{ end }}

@@ -36,6 +36,7 @@ collections:
 - profile
 - expertise
 - achievements
+- employment
 
 defaults:
   - scope:
