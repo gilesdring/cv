@@ -35,6 +35,7 @@ theme: minima
 collections:
 - profile
 - expertise
+- achievements
 
 defaults:
   - scope:

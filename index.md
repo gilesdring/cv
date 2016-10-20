@@ -13,3 +13,10 @@ profile: base
 {% for e in expertise %}
 * {{ e }}
 {% endfor %}
+
+# Achievements
+
+{% assign achievements = site.achievements | where:"display","true" %}
+{% for a in achievements %}
+* {{ a }}
+{% endfor %}
